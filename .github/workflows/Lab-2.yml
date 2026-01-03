@@ -3,33 +3,43 @@ name: Testing github workflows
 on: push
 
 jobs:
-  Initialisation:
+  init:
     runs-on: ubuntu-latest
     steps:
       - run: echo 'Initialisation'
       - run: echo $HOSTNAME
-  Recuperation du code:
+
+  recuperation_code:
     runs-on: ubuntu-latest
+    needs: init
     steps:
       - run: echo 'Recuperation du code'
       - run: echo $HOSTNAME
-  Build:
+
+  build:
     runs-on: ubuntu-latest
+    needs: recuperation_code
     steps:
-     - run: echo 'Build'
-     - run: echo $HOSTNAME
-  Tests:
+      - run: echo 'Build'
+      - run: echo $HOSTNAME
+
+  tests:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - run: echo 'Tests'
       - run: echo $HOSTNAME
-  Packaging:
+
+  packaging:
     runs-on: ubuntu-latest
+    needs: tests
     steps:
       - run: echo 'Packaging'
       - run: echo $HOSTNAME
-  Fin du pipeline:
+
+  fin_pipeline:
     runs-on: ubuntu-latest
+    needs: packaging
     steps:
       - run: echo 'Fin du pipeline'
       - run: echo $HOSTNAME
