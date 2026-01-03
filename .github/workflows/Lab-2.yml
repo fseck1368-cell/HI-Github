@@ -1,0 +1,29 @@
+name: Testing github workflows
+
+on: push
+
+jobs:
+  Initialisation:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo $HOSTNAME
+  Recuperation du code:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo $HOSTNAME
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo $HOSTNAME
+  Tests:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo $HOSTNAME
+  Packaging:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo $HOSTNAME
+  Fin du pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo $HOSTNAME
