@@ -6,24 +6,30 @@ jobs:
   Initialisation:
     runs-on: ubuntu-latest
     steps:
+      - run: echo 'Initialisation'
       - run: echo $HOSTNAME
   Recuperation du code:
     runs-on: ubuntu-latest
     steps:
+      - run: echo 'Recuperation du code'
       - run: echo $HOSTNAME
   Build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo $HOSTNAME
+     - run: echo 'Build'
+     - run: echo $HOSTNAME
   Tests:
     runs-on: ubuntu-latest
     steps:
+      - run: echo 'Tests'
       - run: echo $HOSTNAME
   Packaging:
     runs-on: ubuntu-latest
     steps:
+      - run: echo 'Packaging'
       - run: echo $HOSTNAME
   Fin du pipeline:
     runs-on: ubuntu-latest
     steps:
+      - run: echo 'Fin du pipeline'
       - run: echo $HOSTNAME
