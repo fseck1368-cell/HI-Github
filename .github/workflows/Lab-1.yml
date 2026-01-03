@@ -3,32 +3,32 @@ name: Testing github workflows
 on: push
 
 jobs:
-  init:
+  Initialisation:
     runs-on: ubuntu-latest
     steps:
       - run: echo 'Initialisation'
       - run: echo $HOSTNAME
-  init2:
+  Récupération du code:
     runs-on: ubuntu-latest
     steps:
       - run: echo 'Récupération du code'
       - run: echo $HOSTNAME
-  init3:
+  Build:
     runs-on: ubuntu-latest
     steps:
       - run: echo 'Build'
       - run: echo $HOSTNAME
-  init4:
+  Tests:
     runs-on: ubuntu-latest
     steps:
       - run: echo 'Tests'
       - run: echo $HOSTNAME
-  init5:
+  Packaging:
     runs-on: ubuntu-latest
     steps:
       - run: echo 'Packaging'
       - run: echo $HOSTNAME
-  init6:
+  Fin du pipeline:
     runs-on: ubuntu-latest
     steps:
       - run: echo 'Fin du pipeline'
